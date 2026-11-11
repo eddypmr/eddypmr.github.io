@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f9fb">
+  <meta name="description" content="Eddy Patrik Morocho Realpe — Computer Engineer working across cloud infrastructure, DevOps, automation and software quality. Explore my experience and projects.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Eddy Patrik — Software, Cloud & Automation">
+  <meta property="og:description" content="Computer Engineer based in Valencia. Cloud infrastructure, CI/CD, QA automation, and selected technical projects.">
+  <meta property="og:url" content="https://eddypmr.github.io/">
+  <meta property="og:image" content="https://eddypmr.github.io/assets/profile.webp">
+  <title>Eddy Patrik — Engineering Portfolio</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23182d42'/%3E%3Ctext x='32' y='44' text-anchor='middle' fill='white' font-size='32' font-family='Arial' font-weight='bold'%3EEP%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="Eddy Patrik, back to top">eddy<span>.</span></a>
+      <nav id="navigation" aria-label="Primary navigation">
+        <a href="#about">About</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button id="theme-toggle" class="icon-btn" type="button" aria-label="Switch to dark mode" title="Toggle theme">◐</button>
+        <a class="button button-small" href="mailto:eddypmorochor@gmail.com">Let's talk <span aria-hidden="true">↗</span></a>
+        <button class="icon-btn menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="navigation" type="button">☰</button>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero container" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="status-dot"></span> VALENCIA, SPAIN · OPEN TO OPPORTUNITIES</div>
+        <h1>Hi, I'm <span class="name">Eddy Patrik.</span><br><span class="muted-heading">I build, automate<br>and improve systems.</span></h1>
+        <p class="hero-lead">Computer Engineer with a Master's in Cloud Computing, working at the intersection of <strong>cloud infrastructure, DevOps, and software quality.</strong> I enjoy turning complex problems into reliable, maintainable solutions.</p>
+        <div class="hero-buttons"><a class="button" href="#projects">Explore my work <span aria-hidden="true">↗</span></a><a class="button button-outline" href="#contact">Get in touch <span aria-hidden="true">→</span></a></div>
+        <div class="hero-social"><a href="https://github.com/eddypmr" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/eddy-patrik/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="mailto:eddypmorochor@gmail.com">Email ↗</a></div>
+      </div>
+      <div class="hero-visual"><div class="portrait-frame"><img src="assets/profile.webp" alt="Portrait of Eddy Patrik Morocho Realpe" width="420" height="420" fetchpriority="high"><div class="portrait-caption"><span>EDDY PATRIK</span><span>ENGINEER / PROBLEM SOLVER</span></div></div><div class="visual-accent accent-top"></div><div class="visual-accent accent-bottom"></div></div>
+    </section>
+    <div class="trust-strip"><div class="container trust-inner"><span>MY TOOLKIT</span><div>AWS</div><div>AZURE</div><div>TERRAFORM</div><div>DOCKER</div><div>KUBERNETES</div><div>JENKINS</div></div></div>
+    <section class="section container about-section" id="about">
+      <div class="section-heading"><div class="section-kicker">01 / INTRODUCTION</div><h2>A little about me<span class="period">.</span></h2></div>
+      <div class="about-grid"><div class="about-intro"><p>I'm a Computer Engineer with a Master's degree in Cloud Computing and High-Performance Systems from Universitat Politècnica de València.</p><p>My path started with supporting production systems and evolved into QA automation. Along the way, I've built hands-on cloud projects involving infrastructure as code, secure delivery pipelines and container orchestration.</p><p>I'm especially interested in engineering teams that value reliability, continuous learning and thoughtful automation.</p></div><div class="about-facts"><div><span>BASED IN</span><strong>Valencia, Spain</strong></div><div><span>EXPERIENCE</span><strong>Infrastructure support & QA automation</strong></div><div><span>EDUCATION</span><strong>M.Sc. Cloud Computing · B.Sc. Computer Engineering</strong></div><div><span>FOCUS</span><strong>Cloud · DevOps · Automation</strong></div></div></div>
+    </section>
+    <section class="section section-tint" id="projects"><div class="container"><div class="section-heading heading-with-aside"><div><div class="section-kicker">02 / SELECTED WORK</div><h2>Things I've built<span class="period">.</span></h2></div><p>Practical projects exploring cloud infrastructure, CI/CD, observability and serverless architecture.</p></div>
+      <div class="project-grid">
+        <article class="project-card"><div class="project-top"><div class="project-icon">01</div><span>Cloud / Kubernetes</span></div><h3>AWS Kubernetes CI/CD</h3><p>Deployed a containerized FastAPI service on Amazon EKS with ECR, ALB and automated delivery using GitHub Actions and OIDC authentication.</p><div class="tags"><span>AWS EKS</span><span>Docker</span><span>GitHub Actions</span><span>OIDC</span></div><a href="https://github.com/eddypmr/aws-cicd-eks-ecr-alb" target="_blank" rel="noopener noreferrer" aria-label="View AWS Kubernetes CI/CD project on GitHub">View source <span aria-hidden="true">↗</span></a></article>
+        <article class="project-card"><div class="project-top"><div class="project-icon">02</div><span>Security / CI/CD</span></div><h3>Secure AWS Deployment</h3><p>Built a pipeline using temporary AWS credentials via OIDC and controlled remote deployments through Systems Manager — without SSH access or stored AWS keys.</p><div class="tags"><span>Terraform</span><span>AWS SSM</span><span>OIDC</span><span>CI/CD</span></div><a href="https://github.com/eddypmr/aws-cicd-ssm-oidc-dashboard" target="_blank" rel="noopener noreferrer" aria-label="View Secure AWS Deployment project on GitHub">View source <span aria-hidden="true">↗</span></a></article>
+        <article class="project-card"><div class="project-top"><div class="project-icon">03</div><span>Full-stack / Monitoring</span></div><h3>Observability Dashboard</h3><p>Created a lightweight monitoring dashboard with a Next.js frontend and FastAPI backend to surface service health, latency, deployment version and build information.</p><div class="tags"><span>Next.js</span><span>FastAPI</span><span>Docker</span><span>Monitoring</span></div><a href="https://github.com/eddypmr/aws-eks-observability-dashboard" target="_blank" rel="noopener noreferrer" aria-label="View Observability Dashboard project on GitHub">View source <span aria-hidden="true">↗</span></a></article>
+        <article class="project-card"><div class="project-top"><div class="project-icon">04</div><span>Academic / Serverless</span></div><h3>Cloud Migration of ACTaaS</h3><p>My master's thesis: migrated an academic evaluation workflow toward a serverless design on Azure Functions, with Jenkins orchestration and Azure Storage.</p><div class="tags"><span>Azure Functions</span><span>Jenkins</span><span>Python</span><span>Azure Storage</span></div><a href="https://github.com/eddypmr/TFM" target="_blank" rel="noopener noreferrer" aria-label="View Cloud Migration thesis project on GitHub">View source <span aria-hidden="true">↗</span></a></article>
+      </div><a class="inline-link all-projects" href="https://github.com/eddypmr?tab=repositories" target="_blank" rel="noopener noreferrer">Explore all GitHub repositories <span aria-hidden="true">↗</span></a></div></section>
+    <section class="section container" id="experience"><div class="section-heading"><div class="section-kicker">03 / MY JOURNEY</div><h2>Professional experience<span class="period">.</span></h2></div>
+      <div class="timeline">
+        <article class="timeline-item"><div class="timeline-date">APR 2026 — PRESENT</div><div class="timeline-content"><div class="timeline-title"><h3>QA Automation Engineer</h3><span>F1-Connecting</span></div><p>Build and maintain Cypress tests for front-end workflows, perform functional testing across applications and back-end systems, and support payment terminal certifications across major card schemes.</p><div class="tags"><span>Cypress</span><span>JavaScript</span><span>Functional testing</span><span>Payment systems</span></div></div></article>
+        <article class="timeline-item"><div class="timeline-date">2023 — APR 2026</div><div class="timeline-content"><div class="timeline-title"><h3>Technical Support</h3><span>F1-Connecting</span></div><p>Supported production Linux and Windows systems, investigated connectivity and service issues, monitored infrastructure and collaborated with cross-functional teams supporting distributed payment environments.</p><div class="tags"><span>Linux</span><span>Networking</span><span>Incident response</span><span>SSH</span></div></div></article>
+        <article class="timeline-item"><div class="timeline-date">3-MONTH INTERNSHIP</div><div class="timeline-content"><div class="timeline-title"><h3>Application Integrator</h3><span>Mercadona</span></div><p>Worked with API-based integrations, transformed XML payloads to JSON, maintained YAML configuration and used Git in development workflows.</p><div class="tags"><span>APIs</span><span>XML / JSON</span><span>YAML</span><span>Git</span></div></div></article>
+      </div>
+    </section>
+    <section class="section section-tint" id="skills"><div class="container"><div class="section-heading"><div class="section-kicker">04 / CAPABILITIES</div><h2>Tools & technologies<span class="period">.</span></h2></div><div class="skills-grid">
+      <div class="skill-group"><h3>Cloud platforms</h3><p>AWS · Microsoft Azure · Google Cloud</p></div>
+      <div class="skill-group"><h3>Infrastructure & containers</h3><p>Terraform · Ansible · Docker · Kubernetes</p></div>
+      <div class="skill-group"><h3>CI/CD & automation</h3><p>Jenkins · GitHub Actions · GitLab CI · Bash</p></div>
+      <div class="skill-group"><h3>Software & testing</h3><p>Python · JavaScript · Java · Cypress · API testing</p></div>
+      <div class="skill-group"><h3>Systems & networking</h3><p>Linux · Windows Server · SSH · Troubleshooting</p></div>
+      <div class="skill-group"><h3>Collaboration & tools</h3><p>Git · GitHub · GitLab · YAML · JSON</p></div>
+    </div></div></section>
+    <section class="section container" id="education"><div class="section-heading"><div class="section-kicker">05 / FOUNDATIONS</div><h2>Education<span class="period">.</span></h2></div><div class="education-grid"><div class="education-card"><span>2023 — 2025</span><h3>Master's in Cloud Computing and High-Performance Systems</h3><p>Universitat Politècnica de València</p></div><div class="education-card"><span>2018 — 2023</span><h3>Bachelor's in Computer Engineering</h3><p>Universitat Politècnica de València</p></div></div><p class="certs">Additional learning: Claude 101 · Claude Code (Anthropic)</p></section>
+    <section class="contact-section" id="contact"><div class="container contact-inner"><div class="section-kicker">06 / GET IN TOUCH</div><h2>Let's build something<br><em>meaningful.</em></h2><p>Open to opportunities in cloud engineering, DevOps and automation. Interested in my work or want to connect? I'd love to hear from you.</p><a class="button contact-button" href="mailto:eddypmorochor@gmail.com">Say hello <span aria-hidden="true">↗</span></a><div class="contact-links"><a href="https://github.com/eddypmr" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/eddy-patrik/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="mailto:eddypmorochor@gmail.com">Email ↗</a></div></div></section>
+  </main>
+  <footer><div class="container footer-inner"><a class="brand" href="#home">eddy<span>.</span></a><p>Designed & built with care. © <span id="year">2026</span> Eddy Patrik.</p><a href="#home">Back to top ↑</a></div></footer>
+</body>
+</html>
