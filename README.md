@@ -20,7 +20,7 @@ Run `python3 -m http.server 8080` in this folder and open http://localhost:8080.
 5. Visit https://eddypmr.github.io/.
 
 ## Updating content
-Edit `index.html` to update sections, project links, and contact details. Edit `styles.css` for layout and colors. The image is `assets/profile.webp`.
+Edit `index.html` to update sections, project links, and contact details. Edit `styles.css` for layout and colors. The image is `assets/profile.jpg`.
 
 Contact buttons open a dialog with the email address, a copy button, and links to Gmail or the visitor's email app. The address is shown inside the dialog; visitors without JavaScript see an email address in the contact section as a fallback. When updating the email, replace every occurrence in `index.html`, including the encoded address in the Gmail link.
 
