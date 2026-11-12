@@ -3,15 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f8f9fb">
+  <meta name="theme-color" content="#ffffff">
   <meta name="description" content="Eddy Patrik Morocho Realpe — Computer Engineer working across cloud infrastructure, DevOps, automation and software quality. Explore my experience and projects.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Eddy Patrik — Software, Cloud & Automation">
   <meta property="og:description" content="Computer Engineer based in Valencia. Cloud infrastructure, CI/CD, QA automation, and selected technical projects.">
   <meta property="og:url" content="https://eddypmr.github.io/">
   <meta property="og:image" content="https://eddypmr.github.io/assets/profile.webp">
+  <meta property="og:image:alt" content="Portrait of Eddy Patrik Morocho Realpe">
+  <meta name="twitter:card" content="summary">
   <title>Eddy Patrik — Engineering Portfolio</title>
+  <link rel="canonical" href="https://eddypmr.github.io/">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23182d42'/%3E%3Ctext x='32' y='44' text-anchor='middle' fill='white' font-size='32' font-family='Arial' font-weight='bold'%3EEP%3C/text%3E%3C/svg%3E">
+  <script>
+    // Apply the preferred theme before the first paint.
+    (() => {
+      let saved;
+      try { saved = localStorage.getItem('portfolio-theme'); } catch {}
+      const dark = saved === 'dark' || (saved !== 'light' && matchMedia('(prefers-color-scheme: dark)').matches);
+      document.documentElement.classList.toggle('dark', dark);
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
@@ -21,20 +36,20 @@
     <div class="container header-inner">
       <a class="brand" href="#home" aria-label="Eddy Patrik, back to top">eddy<span>.</span></a>
       <nav id="navigation" aria-label="Primary navigation">
-        <a href="#about">About</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+        <a href="#about">About</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a>
       </nav>
       <div class="header-actions">
-        <button id="theme-toggle" class="icon-btn" type="button" aria-label="Switch to dark mode" title="Toggle theme">◐</button>
+        <button id="theme-toggle" class="icon-btn" type="button" aria-label="Dark mode" aria-pressed="false" title="Switch to dark mode" hidden>◐</button>
         <a class="button button-small" href="mailto:eddypmorochor@gmail.com">Let's talk <span aria-hidden="true">↗</span></a>
-        <button class="icon-btn menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="navigation" type="button">☰</button>
+        <button class="icon-btn menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="navigation" type="button" hidden>☰</button>
       </div>
     </div>
   </header>
-  <main id="main">
+  <main id="main" tabindex="-1">
     <section class="hero container" id="home">
       <div class="hero-copy">
         <div class="eyebrow"><span class="status-dot"></span> VALENCIA, SPAIN · OPEN TO OPPORTUNITIES</div>
-        <h1>Hi, I'm <span class="name">Eddy Patrik.</span><br><span class="muted-heading">I build, automate<br>and improve systems.</span></h1>
+        <h1>Hi, I'm <span class="name">Eddy.</span><br><span class="muted-heading">I build, automate<br>and improve systems.</span></h1>
         <p class="hero-lead">Computer Engineer with a Master's in Cloud Computing, working at the intersection of <strong>cloud infrastructure, DevOps, and software quality.</strong> I enjoy turning complex problems into reliable, maintainable solutions.</p>
         <div class="hero-buttons"><a class="button" href="#projects">Explore my work <span aria-hidden="true">↗</span></a><a class="button button-outline" href="#contact">Get in touch <span aria-hidden="true">→</span></a></div>
         <div class="hero-social"><a href="https://github.com/eddypmr" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/eddy-patrik/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="mailto:eddypmorochor@gmail.com">Email ↗</a></div>

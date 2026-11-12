@@ -1,4 +1,4 @@
-# Eddy Patrik — Personal Portfolio
+# Eddy Patrik Morocho Realpe — Personal Portfolio
 
 Minimal, responsive portfolio in English, focused on software engineering, cloud infrastructure, DevOps and QA automation.
 
