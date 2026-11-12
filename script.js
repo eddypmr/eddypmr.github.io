@@ -99,15 +99,20 @@
         first.focus();
       }
     });
-    document.getElementById('copy-email').addEventListener('click', async () => {
+    document.getElementById('copy-email').addEventListener('click', async (event) => {
+      const button = event.currentTarget;
+      let copied = false;
       try {
         await navigator.clipboard.writeText(contactEmail.value);
-        copyStatus.textContent = 'Email copied.';
+        copied = true;
       } catch {
-        contactEmail.focus();
+        contactEmail.focus({ preventScroll: true });
         contactEmail.select();
-        copyStatus.textContent = 'Select and copy the email address above.';
+        // Older clipboard support can still work during this explicit copy action.
+        try { copied = document.execCommand('copy'); } catch {}
+        if (copied) button.focus({ preventScroll: true });
       }
+      copyStatus.textContent = copied ? 'Email copied.' : 'Select and copy the email address above.';
     });
   }
 
