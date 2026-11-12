@@ -40,7 +40,7 @@
       </nav>
       <div class="header-actions">
         <button id="theme-toggle" class="icon-btn" type="button" aria-label="Dark mode" aria-pressed="false" title="Switch to dark mode" hidden>◐</button>
-        <a class="button button-small" href="mailto:eddypmorochor@gmail.com">Let's talk <span aria-hidden="true">↗</span></a>
+        <a class="button button-small" href="mailto:eddypmorochor@gmail.com" data-contact>Let's talk <span aria-hidden="true">↗</span></a>
         <button class="icon-btn menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="navigation" type="button" hidden>☰</button>
       </div>
     </div>
@@ -52,7 +52,7 @@
         <h1>Hi, I'm <span class="name">Eddy.</span><br><span class="muted-heading">I build, automate<br>and improve systems.</span></h1>
         <p class="hero-lead">Computer Engineer with a Master's in Cloud Computing, working at the intersection of <strong>cloud infrastructure, DevOps, and software quality.</strong> I enjoy turning complex problems into reliable, maintainable solutions.</p>
         <div class="hero-buttons"><a class="button" href="#projects">Explore my work <span aria-hidden="true">↗</span></a><a class="button button-outline" href="#contact">Get in touch <span aria-hidden="true">→</span></a></div>
-        <div class="hero-social"><a href="https://github.com/eddypmr" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/eddy-patrik/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="mailto:eddypmorochor@gmail.com">Email ↗</a></div>
+        <div class="hero-social"><a href="https://github.com/eddypmr" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/eddy-patrik-morocho-realpe-23023723b/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="mailto:eddypmorochor@gmail.com" data-contact>Email ↗</a></div>
       </div>
       <div class="hero-visual"><div class="portrait-frame"><img src="assets/profile.webp" alt="Portrait of Eddy Patrik Morocho Realpe" width="420" height="420" fetchpriority="high"><div class="portrait-caption"><span>EDDY PATRIK</span><span>ENGINEER / PROBLEM SOLVER</span></div></div><div class="visual-accent accent-top"></div><div class="visual-accent accent-bottom"></div></div>
     </section>
@@ -84,8 +84,25 @@
       <div class="skill-group"><h3>Collaboration & tools</h3><p>Git · GitHub · GitLab · YAML · JSON</p></div>
     </div></div></section>
     <section class="section container" id="education"><div class="section-heading"><div class="section-kicker">05 / FOUNDATIONS</div><h2>Education<span class="period">.</span></h2></div><div class="education-grid"><div class="education-card"><span>2023 — 2025</span><h3>Master's in Cloud Computing and High-Performance Systems</h3><p>Universitat Politècnica de València</p></div><div class="education-card"><span>2018 — 2023</span><h3>Bachelor's in Computer Engineering</h3><p>Universitat Politècnica de València</p></div></div><p class="certs">Additional learning: Claude 101 · Claude Code (Anthropic)</p></section>
-    <section class="contact-section" id="contact"><div class="container contact-inner"><div class="section-kicker">06 / GET IN TOUCH</div><h2>Let's build something<br><em>meaningful.</em></h2><p>Open to opportunities in cloud engineering, DevOps and automation. Interested in my work or want to connect? I'd love to hear from you.</p><a class="button contact-button" href="mailto:eddypmorochor@gmail.com">Say hello <span aria-hidden="true">↗</span></a><div class="contact-links"><a href="https://github.com/eddypmr" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/eddy-patrik/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="mailto:eddypmorochor@gmail.com">Email ↗</a></div></div></section>
+    <section class="contact-section" id="contact"><div class="container contact-inner"><div class="section-kicker">06 / GET IN TOUCH</div><h2>Let's build something<br><em>meaningful.</em></h2><p>Open to opportunities in cloud engineering, DevOps and automation. Interested in my work or want to connect? I'd love to hear from you.</p><a class="button contact-button" href="mailto:eddypmorochor@gmail.com" data-contact>Say hello <span aria-hidden="true">↗</span></a><a class="contact-address" href="mailto:eddypmorochor@gmail.com" data-contact>eddypmorochor@gmail.com</a><div class="contact-links"><a href="https://github.com/eddypmr" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/eddy-patrik-morocho-realpe-23023723b/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="mailto:eddypmorochor@gmail.com" data-contact>Email ↗</a></div></div></section>
   </main>
   <footer><div class="container footer-inner"><a class="brand" href="#home">eddy<span>.</span></a><p>Designed & built with care. © <span id="year">2026</span> Eddy Patrik.</p><a href="#home">Back to top ↑</a></div></footer>
+  <dialog class="contact-dialog" id="contact-dialog" aria-labelledby="contact-dialog-title" aria-describedby="contact-dialog-description">
+    <div class="contact-dialog-heading">
+      <div><p class="section-kicker">GET IN TOUCH</p><h2 id="contact-dialog-title">Let's talk.</h2></div>
+      <form method="dialog"><button class="icon-btn" type="submit" aria-label="Close contact options">×</button></form>
+    </div>
+    <p id="contact-dialog-description">Open an email draft, or copy my address to use your preferred service.</p>
+    <label class="contact-email-label" for="contact-email">Email address</label>
+    <div class="contact-email-field">
+      <input id="contact-email" type="text" inputmode="email" value="eddypmorochor@gmail.com" readonly spellcheck="false">
+      <button class="button" id="copy-email" type="button">Copy email</button>
+    </div>
+    <p class="contact-copy-status" id="contact-copy-status" role="status" aria-atomic="true"></p>
+    <div class="contact-dialog-actions">
+      <a class="button" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=eddypmorochor%40gmail.com" target="_blank" rel="noopener noreferrer">Open Gmail <span aria-hidden="true">↗</span></a>
+      <a class="button button-outline" href="mailto:eddypmorochor@gmail.com">Open email app <span aria-hidden="true">↗</span></a>
+    </div>
+  </dialog>
 </body>
 </html>

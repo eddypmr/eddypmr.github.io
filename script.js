@@ -66,6 +66,51 @@
   }));
   root.classList.add('js');
 
+  const contactDialog = document.getElementById('contact-dialog');
+  const contactEmail = document.getElementById('contact-email');
+  const copyStatus = document.getElementById('contact-copy-status');
+  if (typeof contactDialog.showModal === 'function') {
+    document.querySelectorAll('a[data-contact]').forEach((link) => {
+      link.setAttribute('aria-haspopup', 'dialog');
+      link.setAttribute('aria-controls', contactDialog.id);
+      link.addEventListener('click', (event) => {
+        if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+        copyStatus.textContent = '';
+        contactDialog.showModal();
+        event.preventDefault();
+      });
+    });
+    contactDialog.addEventListener('click', (event) => {
+      const bounds = contactDialog.getBoundingClientRect();
+      const outside = event.clientX < bounds.left || event.clientX > bounds.right
+        || event.clientY < bounds.top || event.clientY > bounds.bottom;
+      if (event.target === contactDialog && outside) contactDialog.close();
+    });
+    contactDialog.addEventListener('keydown', (event) => {
+      if (event.key !== 'Tab') return;
+      const controls = [...contactDialog.querySelectorAll('button, input, a[href]')];
+      const first = controls[0];
+      const last = controls[controls.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    });
+    document.getElementById('copy-email').addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(contactEmail.value);
+        copyStatus.textContent = 'Email copied.';
+      } catch {
+        contactEmail.focus();
+        contactEmail.select();
+        copyStatus.textContent = 'Select and copy the email address above.';
+      }
+    });
+  }
+
   document.getElementById('year').textContent = String(new Date().getFullYear());
 
   const sections = [...document.querySelectorAll('main section[id]')];

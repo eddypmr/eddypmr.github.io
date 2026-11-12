@@ -22,6 +22,8 @@ Run `python3 -m http.server 8080` in this folder and open http://localhost:8080.
 ## Updating content
 Edit `index.html` to update sections, project links, and contact details. Edit `styles.css` for layout and colors. The image is `assets/profile.webp`.
 
+Contact buttons open a dialog with the email address, a copy button, and links to Gmail or the visitor's email app. The address also appears in the contact section so it can be copied without JavaScript. When updating the email, replace every occurrence in `index.html`, including the encoded address in the Gmail link.
+
 The supplied CV PDF has intentionally not been published yet, to avoid exposing the phone number publicly. A downloadable public CV can be added later after redacting personal information.
 
 ## Accessibility and privacy
